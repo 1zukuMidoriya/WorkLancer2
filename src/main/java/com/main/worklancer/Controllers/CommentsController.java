@@ -46,7 +46,6 @@ public class CommentsController {
         if(project == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        comment.setUser();
         comment.setProject(project);
         commentRepo.save(comment);
         return new ResponseEntity<>(project, HttpStatus.CREATED);
